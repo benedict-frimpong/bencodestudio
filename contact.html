@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact | Benedict Frimpong</title>
+  <link rel="stylesheet" href="style/main.css" />
+  <style>
+    .contact-page {
+      max-width: 600px;
+      margin: 4rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .contact-page h1 {
+      text-align: center;
+      color: #0077ff;
+      margin-bottom: 2rem;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    input, textarea {
+      padding: 0.75rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      resize: vertical;
+    }
+
+    button {
+      padding: 0.75rem;
+      font-weight: bold;
+      background-color: #0077ff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #005bb5;
+    }
+
+    .contact-info {
+      margin-top: 2rem;
+      font-size: 0.95rem;
+      color: #444;
+      text-align: center;
+    }
+
+    .contact-info a {
+      color: #0077ff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-page">
+    <h1>Get in Touch</h1>
+
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" rows="6" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <p>Email: <a href="mailto:benedict@example.com">frimpong.work@outlook.com</a></p>
+      <p>GitHub: <a href="https://github.com/benedict-frimpong" target="_blank">github.com/benedict-frimpong</a></p>
+      <p>LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a></p>
+    </div>
+  </div>
+
+</body>
+</html>
