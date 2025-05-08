@@ -1,0 +1,5 @@
+# robots.txt for BenCode Studio
+User-agent: *
+Disallow:
+
+Sitemap: https://bencodestudio.com/sitemap.xml

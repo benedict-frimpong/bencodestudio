@@ -4,125 +4,153 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BenCode Studio | Web & App Development</title>
-  <meta name="description" content="BenCode Studio builds elegant websites and mobile apps for small businesses and entrepreneurs." />
+  <meta name="description" content="BenCode Studio builds elegant, responsive websites and mobile apps for small businesses and entrepreneurs." />
+  <meta name="keywords" content="BenCode Studio, web development, app development, Flutter, portfolio, mobile app studio, DC developer" />
+  <meta name="author" content="BenCode Studio" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="BenCode Studio | Web & App Development" />
+  <meta property="og:description" content="Elegant websites and powerful mobile apps built by BenCode Studio." />
+  <meta property="og:url" content="https://bencodestudio.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://bencodestudio.com/images/preview.png" />
+
+  <!-- Styles and Fonts -->
   <link rel="stylesheet" href="style/main.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <style>
-    /* Back to Top button */
-    #backToTop {
-      position: fixed;
-      bottom: 30px;
-      right: 20px;
-      background-color: #0077ff;
-      color: white;
-      border: none;
-      border-radius: 50%;
-      padding: 0.8rem 1rem;
-      font-size: 1.2rem;
-      cursor: pointer;
-      display: none;
-      z-index: 100;
-    }
-
-    #backToTop:hover {
-      background-color: #005bb5;
-    }
-  </style>
 </head>
+
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="logo">BenCode Studio</div>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<!-- Navigation Bar -->
+<nav class="navbar">
+  <a href="#hero" class="logo">BenCode Studio</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
-  <!-- Hero Section -->
-  <header class="hero" data-aos="fade-up">
-    <h1>Welcome to <span class="highlight">BenCode Studio</span></h1>
-    <p>We craft elegant websites and powerful mobile apps tailored to your goals.</p>
-    <a href="#projects" class="btn">See Our Work</a>
-  </header>
+<!-- Hero Section -->
+<header id="hero" class="hero" data-aos="fade-up">
+  <img src="images/Bencode.png" alt="BenCode Studio Logo" class="hero-logo" width="120">
+  <h1>Welcome to <span class="highlight">BenCode Studio</span></h1>
+  <p>We craft elegant websites and powerful mobile apps tailored to your goals.</p>
+  <a href="#projects" class="btn">See Our Work</a>
+</header>
 
-  <!-- About -->
-  <section id="about" class="section" data-aos="fade-right">
-    <h2>Who We Are</h2>
-    <p>BenCode Studio is a digital development studio focused on sleek UI/UX design, cross-platform development, and scalable backend systems. We help small businesses and entrepreneurs stand out online.</p>
-  </section>
+<!-- About Section -->
+<section id="about" class="section" data-aos="fade-right" data-aos-duration="800">
+  <h2>Who We Are</h2>
+  <p>BenCode Studio is a digital development studio focused on sleek UI/UX design, cross-platform development, and scalable backend systems. We help small businesses and entrepreneurs stand out online.</p>
+</section>
 
-  <!-- Services -->
-  <section id="services" class="section" data-aos="fade-left">
-    <h2>What We Do</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>Website Design</h3>
-        <p>Modern, responsive websites optimized for performance and SEO.</p>
-      </div>
-      <div class="project-card">
-        <h3>Mobile Apps</h3>
-        <p>Cross-platform apps built with Flutter for Android, iOS, and web.</p>
-      </div>
-      <div class="project-card">
-        <h3>Custom Software</h3>
-        <p>Automation tools, dashboards, and cloud-integrated solutions tailored to your business.</p>
-      </div>
+<!-- Services Section -->
+<section id="services" class="section" data-aos="fade-left" data-aos-duration="800">
+  <h2>What We Do</h2>
+  <div class="project-grid">
+    <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+      <h3>Website Design</h3>
+      <p>Modern, responsive websites optimized for performance and SEO.</p>
     </div>
-  </section>
-
-  <!-- Projects -->
-  <section id="projects" class="section" data-aos="fade-up">
-    <h2>Featured Projects</h2>
-    <div class="project-grid">
-      <div class="project-card">
-        <h3>DayPilot Planner App</h3>
-        <p>A smart productivity app with task management, event discovery, and AI scheduling.</p>
-      </div>
-      <div class="project-card">
-        <h3>Dashcam Merger</h3>
-        <p>A desktop tool to merge dashcam videos using Python and FFmpeg with GUI support.</p>
-      </div>
+    <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+      <h3>Mobile Apps</h3>
+      <p>Cross-platform apps built with Flutter for Android, iOS, and web.</p>
     </div>
-  </section>
+    <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
+      <h3>Custom Software</h3>
+      <p>Automation tools, dashboards, and cloud-integrated solutions tailored to your business.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- Contact -->
-  <section id="contact" class="section contact" data-aos="fade-up">
-    <h2>Contact Us</h2>
-    <p>Let's work together. Send a message or reach out directly:</p>
-    <p><strong>Email:</strong> <a href="mailto:frimpong.work@outlook.com">frimpong.work@outlook.com</a></p>
-  </section>
+<!-- Projects Section -->
+<section id="projects" class="section" data-aos="fade-up">
+  <h2>Featured Projects</h2>
+  <div class="project-grid">
+    
+    <!-- DayPilot Project -->
+    <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+      <img src="images/projects/daypilot.png" alt="DayPilot App Screenshot" class="project-thumb">
+      <h3>DayPilot Planner App</h3>
+      <p>A smart productivity app with task management, event discovery, and AI-assisted scheduling.</p>
+      <div class="tech-tags">
+        <span>Flutter</span>
+        <span>Firebase</span>
+        <span>Google Maps API</span>
+      </div>
+      <a href="projects/daypilot.html" class="btn small">View Project</a>
+    </div>
+<!-- Portfolio Website Project -->
+<div class="project-card" data-aos="fade-up" data-aos-delay="300">
+  <img src="images/projects/portfolio.png" alt="BenCode Studio Website Screenshot" class="project-thumb">
+  <h3>BenCode Studio Website</h3>
+  <p>This responsive one-page website showcases services, projects, and contact info for BenCode Studio.</p>
+  <div class="tech-tags">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+  </div>
+  <a href="projects/portfolio.html" class="btn small">View Project</a>
+</div>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 BenCode Studio. All rights reserved.</p>
-  </footer>
+    <!-- Dashcam Merger Project -->
+    <div class="project-card" data-aos="fade-up" data-aos-delay="200">
+      <img src="images/projects/dashcam.png" alt="Dashcam Merger Screenshot" class="project-thumb">
+      <h3>Dashcam Merger Tool</h3>
+      <p>A desktop app built with Python and PyQt for merging dashcam footage with audio and GUI control.</p>
+      <div class="tech-tags">
+        <span>Python</span>
+        <span>PyQt6</span>
+        <span>FFmpeg</span>
+      </div>
+      <a href="projects/dashcam.html" class="btn small">View Project</a>
+    </div>
 
-  <!-- Back to Top Button -->
-  <button id="backToTop" title="Go to top">↑</button>
+  </div>
+  <div style="margin-top: 2rem; text-align: center;">
+    <a href="projects/index.html" class="btn">View All Projects</a>
+  </div>
+  
+</section>
 
-  <!-- Scripts -->
-  <script src="scripts/app.js"></script>
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
 
-    // Show/hide back-to-top button
-    const backToTopBtn = document.getElementById("backToTop");
-    window.addEventListener("scroll", () => {
-      backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
-    });
+<!-- Contact Section -->
+<section id="contact" class="section contact" data-aos="fade-up">
+  <h2>Contact Us</h2>
+  <p>Let's work together. Send a message or reach out directly:</p>
+  <p><strong>Email:</strong> <a href="mailto:frimpong.work@outlook.com">frimpong.work@outlook.com</a></p>
+</section>
 
-    // Scroll to top
-    backToTopBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  </script>
+<!-- Footer -->
+<footer data-aos="fade-in" data-aos-duration="1000">
+  <p>&copy; 2025 BenCode Studio. All rights reserved.</p>
+</footer>
 
+<!-- Back to Top Button -->
+<button id="backToTop" title="Go to top">↑</button>
+
+<!-- Scripts -->
+<script src="scripts/app.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+
+  const backToTopBtn = document.getElementById("backToTop");
+  window.addEventListener("scroll", () => {
+    backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+</script>
 </body>
 </html>

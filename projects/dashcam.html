@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashcam Merger Tool | BenCode Studio</title>
+  <meta name="description" content="Case study of Dashcam Merger — a desktop app for combining dashcam video clips with audio and a custom GUI.">
+  <link rel="stylesheet" href="../style/main.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <a href="../index.html" class="logo">BenCode Studio</a>
+  </nav>
+
+  <main class="section">
+    <h1>Dashcam Merger Tool</h1>
+
+    <img src="../images/projects/dashcam.png" alt="Dashcam Merger Screenshot" class="project-thumb">
+
+    <!-- Challenge -->
+    <section>
+      <h2>💡 The Challenge</h2>
+      <p>
+        Dashcam devices typically save footage in short, timestamped clips with limited or no audio. Editing these manually is tedious, especially for non-technical users who want to upload trip footage or compile incidents.
+      </p>
+    </section>
+
+    <!-- Solution -->
+    <section>
+      <h2>🛠️ The Solution</h2>
+      <p>
+        BenCode Studio developed a lightweight desktop tool that allows users to drag and drop multiple video clips, merge them with optional audio, and output a clean, stitched video using FFmpeg in the background.
+      </p>
+      <ul>
+        <li>PyQt6-powered user interface (GUI)</li>
+        <li>Drag-and-drop support for quick file selection</li>
+        <li>Bundled FFmpeg executable for portability</li>
+        <li>Merge status updates and progress indicator</li>
+        <li>Export options for resolution and file format</li>
+      </ul>
+    </section>
+
+    <!-- Results -->
+    <section>
+      <h2>📈 The Results</h2>
+      <p>
+        The tool is now used regularly to prepare driving footage for YouTube. Future versions will include map overlays, timestamp burn-in, and automatic file sorting by creation date.
+      </p>
+    </section>
+
+    <div class="tech-tags">
+      <span>Python</span>
+      <span>PyQt6</span>
+      <span>FFmpeg</span>
+      <span>Threading</span>
+      <span>Cross-Platform GUI</span>
+    </div>
+
+    <blockquote>
+      <p>“The interface is clean, responsive, and incredibly easy to use — perfect for my road trip videos.”</p>
+      <cite>– Test user, driving content creator</cite>
+    </blockquote>
+
+    <div style="margin-top: 1.5rem;">
+      <a href="https://github.com/benedict-frimpong/dashcam-merger" class="btn small" target="_blank">GitHub Repo</a>
+      <a href="https://bencodestudio.com/#projects" class="btn small">← Back to Projects</a>
+    </div>
+
+  </main>
+
+</body>
+</html>
