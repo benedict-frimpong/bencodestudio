@@ -1,1 +1,36 @@
 .vscode/sftp.json
+
+# macOS system files
+.DS_Store
+
+# Editor folders
+.idea/
+.vscode/
+
+# OS-specific
+Thumbs.db
+
+# Logs
+*.log
+
+# Python virtual environments (if used for dashcam)
+venv/
+__pycache__/
+
+# Node packages (if using npm scripts)
+node_modules/
+
+# Compiled / build folders
+dist/
+build/
+out/
+
+# ZIPs or deployment artifacts
+*.zip
+*.tar.gz
+
+# Don't ignore these essential folders
+!style/
+!scripts/
+!images/
+!projects/

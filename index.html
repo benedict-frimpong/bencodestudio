@@ -7,7 +7,7 @@
   <meta name="description" content="BenCode Studio builds elegant, responsive websites and mobile apps for small businesses and entrepreneurs." />
   <meta name="keywords" content="BenCode Studio, web development, app development, Flutter, portfolio, mobile app studio, DC developer" />
   <meta name="author" content="BenCode Studio" />
-
+  
   <!-- Open Graph -->
   <meta property="og:title" content="BenCode Studio | Web & App Development" />
   <meta property="og:description" content="Elegant websites and powerful mobile apps built by BenCode Studio." />
@@ -15,11 +15,42 @@
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://bencodestudio.com/images/preview.png" />
 
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
   <!-- Styles and Fonts -->
-  <link rel="stylesheet" href="style/main.css" />
+<link rel="stylesheet" href="style/main.css" />
+<link rel="stylesheet" href="style/components.css" />
+<link rel="stylesheet" href="style/sections.css" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Schema.org (SEO) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "BenCode Studio",
+    "url": "https://bencodestudio.com",
+    "email": "frimpong.work@outlook.com",
+    "description": "Web and mobile app development studio.",
+    "sameAs": [
+      "https://linkedin.com/in/yourprofile",
+      "https://github.com/yourprofile"
+    ]
+  }
+  </script>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNV8MFNW48"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-DNV8MFNW48');
+</script>
 </head>
 
 <body>
@@ -40,7 +71,10 @@
   <img src="images/Bencode.png" alt="BenCode Studio Logo" class="hero-logo" width="120">
   <h1>Welcome to <span class="highlight">BenCode Studio</span></h1>
   <p>We craft elegant websites and powerful mobile apps tailored to your goals.</p>
-  <a href="#projects" class="btn">See Our Work</a>
+  <div class="hero-buttons">
+    <a href="#projects" class="btn">See Our Work</a>
+    <a href="#contact" class="btn secondary">Get a Quote</a>
+  </div>
 </header>
 
 <!-- About Section -->
@@ -72,8 +106,7 @@
 <section id="projects" class="section" data-aos="fade-up">
   <h2>Featured Projects</h2>
   <div class="project-grid">
-    
-    <!-- DayPilot Project -->
+     <!-- DayPilot Project -->
     <div class="project-card" data-aos="fade-up" data-aos-delay="100">
       <img src="images/projects/daypilot.png" alt="DayPilot App Screenshot" class="project-thumb">
       <h3>DayPilot Planner App</h3>
@@ -115,15 +148,24 @@
   <div style="margin-top: 2rem; text-align: center;">
     <a href="projects/index.html" class="btn">View All Projects</a>
   </div>
-  
 </section>
 
+<!-- Testimonials Section -->
+<section class="section testimonials" data-aos="fade-up">
+  <h2>What Clients Say</h2>
+  <blockquote>“BenCode Studio delivered my site fast and exceeded my expectations.”<br>– Kofi, Vechovaly CEO</blockquote>
+</section>
 
 <!-- Contact Section -->
 <section id="contact" class="section contact" data-aos="fade-up">
   <h2>Contact Us</h2>
   <p>Let's work together. Send a message or reach out directly:</p>
-  <p><strong>Email:</strong> <a href="mailto:frimpong.work@outlook.com">frimpong.work@outlook.com</a></p>
+  <form action="mailto:frimpong.work@outlook.com" method="post" enctype="text/plain">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+    <button type="submit" class="btn">Send Message</button>
+  </form>
 </section>
 
 <!-- Footer -->
@@ -136,12 +178,10 @@
 
 <!-- Scripts -->
 <script src="scripts/app.js"></script>
+<script src="scripts/home.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 <script>
-  AOS.init({
-    duration: 800,
-    once: true
-  });
+  AOS.init({ duration: 800, once: true });
 
   const backToTopBtn = document.getElementById("backToTop");
   window.addEventListener("scroll", () => {
@@ -152,5 +192,6 @@
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 </script>
+
 </body>
 </html>
