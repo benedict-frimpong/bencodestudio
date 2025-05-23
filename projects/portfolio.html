@@ -4,52 +4,101 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>BenCode Studio Website | Case Study</title>
+  <meta name="description" content="Case study of the BenCode Studio website — a responsive one-page site showcasing services, projects, and contact.">
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bencodestudio.com/projects/portfolio.html" />
+
   <link rel="stylesheet" href="../style/main.css" />
+  <link rel="stylesheet" href="../style/components.css" />
+  <link rel="stylesheet" href="../style/sections.css" />
   <link rel="stylesheet" href="../style/responsive.css" />
 </head>
 <body>
-  <nav class="navbar">
-    <a href="../index.html" class="logo">BenCode Studio</a>
-  </nav>
 
-  <main class="section">
-    <h1>BenCode Studio Website</h1>
-    <img src="../images/projects/portfolio.png" alt="Screenshot of Portfolio Site" class="project-thumb">
+<!-- Navbar -->
+<nav class="navbar">
+  <a href="../index.html" class="logo">BenCode Studio</a>
+  <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+  <ul class="nav-links">
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#services">Services</a></li>
+    <li><a href="../index.html#projects">Projects</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+  <button id="darkToggle" title="Toggle Dark Mode">🌙</button>
+</nav>
 
-    <!-- Case Study Format -->
-    <section>
-      <h2>The Challenge</h2>
-      <p>Create a single-page website to represent BenCode Studio with clear services, a modern look, and mobile responsiveness.</p>
-    </section>
+<!-- Case Study Content -->
+<main class="section">
+  <h1>BenCode Studio Website</h1>
+  <img src="../images/projects/portfolio.png" alt="Screenshot of Portfolio Site" class="project-thumb full" loading="lazy">
 
-    <section>
-      <h2>The Solution</h2>
-      <p>Designed a smooth-scroll, AOS-enhanced one-page layout with sticky nav, back-to-top button, and mobile-friendly layout using HTML/CSS/JS.</p>
-    </section>
+  <!-- Challenge -->
+  <section>
+    <h2>💡 The Challenge</h2>
+    <p>Create a single-page website to represent BenCode Studio with clear services, a modern look, and mobile responsiveness.</p>
+  </section>
 
-    <section>
-      <h2>The Results</h2>
-      <p>Launched within 5 days. Visitors spend more time on the homepage and easily navigate between services and contact.</p>
-    </section>
-    
-    <blockquote>
-        <p>“The new BenCode Studio website feels clean, fast, and professional. Exactly what I needed to attract new clients!”</p>
-        <cite>– Benedict Frimpong, Founder</cite>
-      </blockquote>
-      
-    <!-- Tech Tags -->
-    <div class="tech-tags">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-      <span>AOS</span>
-    </div>
+  <!-- Solution -->
+  <section>
+    <h2>🛠️ The Solution</h2>
+    <p>Designed a smooth-scroll, AOS-enhanced one-page layout with sticky nav, back-to-top button, and mobile-friendly layout using HTML/CSS/JS.</p>
+  </section>
 
-    <!-- Action Buttons -->
-    <div style="margin-top: 1.5rem;">
-      <a href="https://github.com/benedict-frimpong/bencode-portfolio" class="btn small" target="_blank">GitHub Repo</a>
-      <a href="../index.html" class="btn small">← Back to Projects</a>
-    </div>
-  </main>
+  <!-- Results -->
+  <section>
+    <h2>📈 The Results</h2>
+    <p>Launched within 5 days. Visitors spend more time on the homepage and easily navigate between services and contact.</p>
+  </section>
+
+  <!-- Testimonial -->
+  <blockquote>
+    <p>“The new BenCode Studio website feels clean, fast, and professional. Exactly what I needed to attract new clients!”</p>
+    <cite>– Benedict Frimpong, Founder</cite>
+  </blockquote>
+
+  <!-- Tech Tags -->
+  <div class="tech-tags">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>AOS</span>
+  </div>
+
+  <!-- CTA -->
+  <div style="margin-top: 1.5rem;">
+    <a href="https://github.com/benedict-frimpong/bencode-portfolio" class="btn small" target="_blank">GitHub Repo</a>
+    <a href="../index.html#projects" class="btn small">← Back to Projects</a>
+  </div>
+</main>
+
+<!-- Back to Top -->
+<button id="backToTop" title="Go to top">↑</button>
+
+<!-- Scripts -->
+<script>
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  toggleBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+  const backToTopBtn = document.getElementById("backToTop");
+  window.addEventListener("scroll", () => {
+    backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  const darkToggle = document.getElementById("darkToggle");
+  const body = document.body;
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") body.classList.add("dark");
+
+  darkToggle.addEventListener("click", () => {
+    body.classList.toggle("dark");
+    localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
+  });
+</script>
+
 </body>
 </html>

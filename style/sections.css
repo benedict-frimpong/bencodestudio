@@ -1,4 +1,4 @@
-
+/* 🧭 Navigation Bar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -10,8 +10,10 @@
   top: 0;
   z-index: 10;
 }
+body.dark .navbar {
+  background: #1f2937;
+}
 .navbar.scrolled {
-  background-color: #ffffff;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   transition: 0.3s ease-in-out;
 }
@@ -32,6 +34,29 @@
   border-bottom: 2px solid #0077ff;
   padding-bottom: 2px;
 }
+body.dark .nav-links a {
+  color: #d1d5db;
+}
+body.dark .nav-links a:hover,
+body.dark .nav-links a.active {
+  color: #60a5fa;
+  border-bottom: 2px solid #60a5fa;
+}
+
+/* 📱 Mobile nav toggle */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0077ff;
+}
+body.dark .menu-toggle {
+  color: #60a5fa;
+}
+
+/* 🌈 Hero */
 .hero {
   padding: 4rem 2rem;
   text-align: center;
@@ -56,6 +81,8 @@
   gap: 1rem;
   flex-wrap: wrap;
 }
+
+/* 📦 Content Sections */
 .section {
   padding: 3rem 2rem;
 }
@@ -75,6 +102,21 @@
 .project-card:hover {
   transform: translateY(-5px);
 }
+.project-thumb.full {
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  margin: 1rem auto;
+  display: block;
+}
+
+body.dark .project-card {
+  background: #1e293b;
+  color: #f1f5f9;
+}
+
+/* 💬 Testimonials */
 .testimonials {
   background-color: #f9fafb;
   padding-top: 2rem;
@@ -90,6 +132,12 @@
   color: #374151;
   border-radius: 6px;
 }
+body.dark .testimonials blockquote {
+  background: #1f2937;
+  color: #e2e8f0;
+}
+
+/* ✉️ Contact Form */
 .contact {
   background: #f3f4f6;
   text-align: center;
@@ -126,25 +174,25 @@
 .contact button:hover {
   background-color: #005bb5;
 }
+body.dark .contact {
+  background: #1f2937;
+}
+body.dark .contact input,
+body.dark .contact textarea {
+  background: #111827;
+  color: #f9fafb;
+  border-color: #374151;
+}
+
+/* 🔻 Footer */
 footer {
   text-align: center;
   padding: 2rem;
   background: #111827;
   color: white;
 }
-blockquote {
-  margin: 1.5rem 0;
-  padding: 1rem;
-  background-color: #f9f9f9;
-  border-left: 4px solid #0077ff;
-  font-style: italic;
-}
-cite {
-  display: block;
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
-  color: #555;
-}
+
+/* 🔘 Filter buttons (Archive page) */
 .filter-buttons {
   margin-bottom: 2rem;
   display: flex;
@@ -165,4 +213,13 @@ cite {
 .filter-btn.active {
   background: #0077ff;
   color: white;
+}
+body.dark .filter-btn {
+  background: #1f2937;
+  color: #60a5fa;
+}
+body.dark .filter-btn:hover,
+body.dark .filter-btn.active {
+  background: #60a5fa;
+  color: #1f2937;
 }

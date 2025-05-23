@@ -5,79 +5,115 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dashcam Merger Tool | BenCode Studio</title>
   <meta name="description" content="Case study of Dashcam Merger — a desktop app for combining dashcam video clips with audio and a custom GUI.">
-  <link rel="stylesheet" href="../style/main.css" />
-  <link rel="stylesheet" href="../style/responsive.css" />
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNV8MFNW48"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bencodestudio.com/projects/dashcam.html" />
 
-  gtag('config', 'G-DNV8MFNW48');
-</script>
+  <link rel="stylesheet" href="../style/main.css" />
+  <link rel="stylesheet" href="../style/components.css" />
+  <link rel="stylesheet" href="../style/sections.css" />
+  <link rel="stylesheet" href="../style/responsive.css" />
 </head>
 <body>
 
-  <nav class="navbar">
-    <a href="../index.html" class="logo">BenCode Studio</a>
-  </nav>
+<!-- Navbar -->
+<nav class="navbar">
+  <a href="../index.html" class="logo">BenCode Studio</a>
+  <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+  <ul class="nav-links">
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#services">Services</a></li>
+    <li><a href="../index.html#projects">Projects</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+  <button id="darkToggle" title="Toggle Dark Mode">🌙</button>
+</nav>
 
-  <main class="section">
-    <h1>Dashcam Merger Tool</h1>
+<!-- Main Content -->
+<main class="section">
+  <h1>Dashcam Merger Tool</h1>
 
-    <img src="../images/projects/dashcam.png" alt="Dashcam Merger Screenshot" class="project-thumb">
+  <img src="../images/projects/dashcam.png" alt="Dashcam Merger Screenshot" class="project-thumb full" loading="lazy">
 
-    <!-- Challenge -->
-    <section>
-      <h2>💡 The Challenge</h2>
-      <p>
-        Dashcam devices typically save footage in short, timestamped clips with limited or no audio. Editing these manually is tedious, especially for non-technical users who want to upload trip footage or compile incidents.
-      </p>
-    </section>
+  <!-- Challenge -->
+  <section>
+    <h2>💡 The Challenge</h2>
+    <p>
+      Dashcam devices typically save footage in short, timestamped clips with limited or no audio. Editing these manually is tedious, especially for non-technical users who want to upload trip footage or compile incidents.
+    </p>
+  </section>
 
-    <!-- Solution -->
-    <section>
-      <h2>🛠️ The Solution</h2>
-      <p>
-        BenCode Studio developed a lightweight desktop tool that allows users to drag and drop multiple video clips, merge them with optional audio, and output a clean, stitched video using FFmpeg in the background.
-      </p>
-      <ul>
-        <li>PyQt6-powered user interface (GUI)</li>
-        <li>Drag-and-drop support for quick file selection</li>
-        <li>Bundled FFmpeg executable for portability</li>
-        <li>Merge status updates and progress indicator</li>
-        <li>Export options for resolution and file format</li>
-      </ul>
-    </section>
+  <!-- Solution -->
+  <section>
+    <h2>🛠️ The Solution</h2>
+    <p>
+      BenCode Studio developed a lightweight desktop tool that allows users to drag and drop multiple video clips, merge them with optional audio, and output a clean, stitched video using FFmpeg in the background.
+    </p>
+    <ul>
+      <li>PyQt6-powered user interface (GUI)</li>
+      <li>Drag-and-drop support for quick file selection</li>
+      <li>Bundled FFmpeg executable for portability</li>
+      <li>Merge status updates and progress indicator</li>
+      <li>Export options for resolution and file format</li>
+    </ul>
+  </section>
 
-    <!-- Results -->
-    <section>
-      <h2>📈 The Results</h2>
-      <p>
-        The tool is now used regularly to prepare driving footage for YouTube. Future versions will include map overlays, timestamp burn-in, and automatic file sorting by creation date.
-      </p>
-    </section>
+  <!-- Results -->
+  <section>
+    <h2>📈 The Results</h2>
+    <p>
+      The tool is now used regularly to prepare driving footage for YouTube. Future versions will include map overlays, timestamp burn-in, and automatic file sorting by creation date.
+    </p>
+  </section>
 
-    <div class="tech-tags">
-      <span>Python</span>
-      <span>PyQt6</span>
-      <span>FFmpeg</span>
-      <span>Threading</span>
-      <span>Cross-Platform GUI</span>
-    </div>
+  <!-- Tech Tags -->
+  <div class="tech-tags">
+    <span>Python</span>
+    <span>PyQt6</span>
+    <span>FFmpeg</span>
+    <span>Threading</span>
+    <span>Cross-Platform GUI</span>
+  </div>
 
-    <blockquote>
-      <p>“The interface is clean, responsive, and incredibly easy to use — perfect for my road trip videos.”</p>
-      <cite>– Test user, driving content creator</cite>
-    </blockquote>
+  <!-- Testimonial -->
+  <blockquote>
+    <p>“The interface is clean, responsive, and incredibly easy to use — perfect for my road trip videos.”</p>
+    <cite>– Test user, driving content creator</cite>
+  </blockquote>
 
-    <div style="margin-top: 1.5rem;">
-      <a href="https://github.com/benedict-frimpong/dashcam-merger" class="btn small" target="_blank">GitHub Repo</a>
-      <a href="https://bencodestudio.com/#projects" class="btn small">← Back to Projects</a>
-    </div>
+  <!-- CTA -->
+  <div style="margin-top: 1.5rem;">
+    <a href="https://github.com/benedict-frimpong/dashcam-merger" class="btn small" target="_blank">GitHub Repo</a>
+    <a href="../index.html#projects" class="btn small">← Back to Projects</a>
+  </div>
+</main>
 
-  </main>
+<!-- Back to Top Button -->
+<button id="backToTop" title="Go to top">↑</button>
+
+<!-- Scripts -->
+<script>
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  toggleBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+  const backToTopBtn = document.getElementById("backToTop");
+  window.addEventListener("scroll", () => {
+    backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  const darkToggle = document.getElementById("darkToggle");
+  const body = document.body;
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") body.classList.add("dark");
+
+  darkToggle.addEventListener("click", () => {
+    body.classList.toggle("dark");
+    localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
+  });
+</script>
 
 </body>
 </html>

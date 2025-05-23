@@ -5,95 +5,106 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>DayPilot Planner App | BenCode Studio</title>
   <meta name="description" content="Case study of the DayPilot app by BenCode Studio – a smart productivity tool for managing tasks, events, and schedules with AI.">
-  <link rel="stylesheet" href="../style/main.css" />
-  <link rel="stylesheet" href="../style/responsive.css" />
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNV8MFNW48"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://bencodestudio.com/projects/daypilot.html" />
 
-  gtag('config', 'G-DNV8MFNW48');
-</script>
+  <link rel="stylesheet" href="../style/main.css" />
+  <link rel="stylesheet" href="../style/components.css" />
+  <link rel="stylesheet" href="../style/sections.css" />
+  <link rel="stylesheet" href="../style/responsive.css" />
 </head>
 <body>
 
-  <!-- Navigation -->
-  <nav class="navbar">
-    <a href="../index.html" class="logo">BenCode Studio</a>
-  </nav>
+<!-- Navbar -->
+<nav class="navbar">
+  <a href="../index.html" class="logo">BenCode Studio</a>
+  <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+  <ul class="nav-links">
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#services">Services</a></li>
+    <li><a href="../index.html#projects">Projects</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+  <button id="darkToggle" title="Toggle Dark Mode">🌙</button>
+</nav>
 
-  <!-- Main Case Study Content -->
-  <main class="section">
-    <h1>DayPilot Planner App</h1>
+<!-- Case Study -->
+<main class="section">
+  <h1>DayPilot Planner App</h1>
+  <img src="../images/projects/daypilot.png" alt="DayPilot Screenshot" class="project-thumb full" loading="lazy">
 
-    <img src="../images/projects/daypilot.png" alt="DayPilot App Screenshot" class="project-thumb">
+  <section>
+    <h2>💡 The Challenge</h2>
+    <p>Most productivity tools focus on either task management or calendar planning — rarely both. Users needed an intelligent, all-in-one app that helps them organize their day, prioritize tasks, discover events, and plan effectively.</p>
+  </section>
 
-    <!-- Challenge -->
-    <section>
-      <h2>💡 The Challenge</h2>
-      <p>
-        Most productivity tools focus on either task management or calendar planning — rarely both.
-        Users needed an intelligent, all-in-one app that helps them organize their day, prioritize tasks,
-        discover events, and plan effectively.
-      </p>
-    </section>
+  <section>
+    <h2>🛠️ The Solution</h2>
+    <p>BenCode Studio designed and developed <strong>DayPilot</strong>, a cross-platform personal planner app that combines task tracking, event discovery, and AI-assisted scheduling into one elegant interface.</p>
+    <ul>
+      <li>Cross-platform support (Android, iOS, Web)</li>
+      <li>Smart task & event scheduler with AI scoring</li>
+      <li>Dark mode support with smooth transitions</li>
+      <li>Calendar view with reminders and time blocks</li>
+      <li>Real-time sync using Firebase Cloud Firestore</li>
+    </ul>
+  </section>
 
-    <!-- Solution -->
-    <section>
-      <h2>🛠️ The Solution</h2>
-      <p>
-        BenCode Studio designed and developed <strong>DayPilot</strong>, a cross-platform personal planner app
-        that combines task tracking, event discovery, and AI-assisted scheduling into one elegant interface.
-        Users can create tasks with priority, add events with time/location, get smart time suggestions, and
-        discover nearby events — all in a seamless experience.
-      </p>
-      <ul>
-        <li>Cross-platform support (Android, iOS, Web)</li>
-        <li>Smart task & event scheduler with AI scoring</li>
-        <li>Dark mode support with smooth transitions</li>
-        <li>Calendar view with reminders and time blocks</li>
-        <li>Real-time sync using Firebase Cloud Firestore</li>
-      </ul>
-    </section>
+  <section>
+    <h2>📈 The Results</h2>
+    <ul>
+      <li>✔️ 80% of users reported improved task focus</li>
+      <li>✔️ Fully functional offline mode & reminder system</li>
+      <li>✔️ Modular code structure allows fast updates</li>
+    </ul>
+  </section>
 
-    <!-- Results -->
-    <section>
-      <h2>📈 The Results</h2>
-      <p>
-        The DayPilot app was completed and deployed in under 6 weeks. Early testers praised its user experience,
-        smart scheduling features, and seamless sync across devices.
-      </p>
-      <ul>
-        <li>✔️ 80% of users reported improved task focus</li>
-        <li>✔️ Fully functional offline mode & reminder system</li>
-        <li>✔️ Modular code structure allows fast updates</li>
-      </ul>
-    </section>
+  <div class="tech-tags">
+    <span>Flutter</span>
+    <span>Firebase</span>
+    <span>Firestore</span>
+    <span>Google Maps API</span>
+    <span>AI Task Scoring</span>
+  </div>
 
-    <!-- Technologies Used -->
-    <div class="tech-tags">
-      <span>Flutter</span>
-      <span>Firebase</span>
-      <span>Firestore</span>
-      <span>Google Maps API</span>
-      <span>AI Task Scoring</span>
-    </div>
+  <blockquote>
+    <p>“DayPilot is exactly what I needed — clean, intelligent, and powerful. It replaced 3 apps I was using before.”</p>
+    <cite>– Internal User Test Group</cite>
+  </blockquote>
 
-    <!-- Optional Testimonial -->
-    <blockquote>
-      <p>“DayPilot is exactly what I needed — clean, intelligent, and powerful. It replaced 3 apps I was using before.”</p>
-      <cite>– Internal User Test Group</cite>
-    </blockquote>
+  <div style="margin-top: 1.5rem;">
+    <a href="https://github.com/benedict-frimpong/daypilot" class="btn small" target="_blank">GitHub Repo</a>
+    <a href="../index.html#projects" class="btn small">← Back to Projects</a>
+  </div>
+</main>
 
-    <!-- Buttons -->
-    <div style="margin-top: 1.5rem;">
-      <a href="https://github.com/benedict-frimpong/daypilot" class="btn small" target="_blank">GitHub Repo</a>
-      <a href="https://bencodestudio.com/#projects" class="btn small">← Back to Projects</a>
-    </div>
+<!-- Back to Top Button -->
+<button id="backToTop" title="Go to top">↑</button>
 
-  </main>
+<!-- Scripts -->
+<script>
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  toggleBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+  const backToTopBtn = document.getElementById("backToTop");
+  window.addEventListener("scroll", () => {
+    backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  const darkToggle = document.getElementById("darkToggle");
+  const body = document.body;
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") body.classList.add("dark");
+
+  darkToggle.addEventListener("click", () => {
+    body.classList.toggle("dark");
+    localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
+  });
+</script>
 
 </body>
 </html>

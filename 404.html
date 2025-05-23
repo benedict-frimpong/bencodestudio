@@ -3,49 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Page Not Found | Benedict Frimpong</title>
+  <title>404 - Page Not Found | BenCode Studio</title>
+  <meta name="description" content="Oops! The page you’re looking for doesn’t exist. Return to the homepage or explore projects from BenCode Studio.">
+  <meta name="robots" content="noindex" />
   <link rel="stylesheet" href="style/main.css" />
+  <link rel="stylesheet" href="style/components.css" />
+  <link rel="stylesheet" href="style/sections.css" />
   <link rel="stylesheet" href="style/responsive.css" />
+
   <!-- Lottie CDN -->
   <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-  <style>
-    .not-found {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 5rem 2rem;
-    }
-
-    .not-found h1 {
-      font-size: 4rem;
-      margin: 1rem 0 0.5rem;
-      color: #0077ff;
-    }
-
-    .not-found p {
-      font-size: 1.2rem;
-    }
-
-    .not-found a {
-      margin-top: 2rem;
-      background-color: #0077ff;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-    .not-found a:hover {
-      background-color: #005bb5;
-    }
-  </style>
 </head>
-<body class="not-found">
+<body>
 
-  <!-- Lottie animation -->
+<!-- Navbar -->
+<nav class="navbar">
+  <a href="index.html" class="logo">BenCode Studio</a>
+  <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+  <ul class="nav-links">
+    <li><a href="index.html#about">About</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#projects">Projects</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <button id="darkToggle" title="Toggle Dark Mode">🌙</button>
+</nav>
+
+<!-- 404 Content -->
+<main class="section not-found" style="text-align: center;">
   <lottie-player
     src="https://assets10.lottiefiles.com/packages/lf20_xRmA7w.json"
     background="transparent"
@@ -55,9 +40,41 @@
     autoplay
   ></lottie-player>
 
-  <h1>404</h1>
-  <p>The page you're looking for isn't here.</p>
-  <a href="index.html">Go Home</a>
+  <h1 style="font-size: 3rem; margin-top: 1rem;">404</h1>
+  <p>The page you're looking for doesn't exist.</p>
+  <div style="margin-top: 2rem;">
+    <a href="index.html" class="btn">← Go to Homepage</a>
+    <a href="projects/index.html" class="btn secondary">Explore Projects</a>
+  </div>
+</main>
+
+<!-- Back to Top -->
+<button id="backToTop" title="Go to top">↑</button>
+
+<!-- Scripts -->
+<script>
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  toggleBtn.addEventListener('click', () => navLinks.classList.toggle('open'));
+
+  const backToTopBtn = document.getElementById("backToTop");
+  window.addEventListener("scroll", () => {
+    backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+  backToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  const darkToggle = document.getElementById("darkToggle");
+  const body = document.body;
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") body.classList.add("dark");
+
+  darkToggle.addEventListener("click", () => {
+    body.classList.toggle("dark");
+    localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
+  });
+</script>
 
 </body>
 </html>

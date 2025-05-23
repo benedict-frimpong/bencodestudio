@@ -1,4 +1,4 @@
-
+/* 🔷 Logo */
 .logo {
   text-decoration: none;
   font-weight: 800;
@@ -9,6 +9,8 @@
 .logo:hover {
   color: #005bb5;
 }
+
+/* 🔘 Buttons */
 .btn {
   display: inline-block;
   margin-top: 1rem;
@@ -18,6 +20,7 @@
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 .btn.small {
   padding: 0.5rem 1rem;
@@ -32,6 +35,8 @@
   background-color: #e5e7eb;
   color: #0077ff;
 }
+
+/* 🔼 Back to Top Button */
 #backToTop {
   position: fixed;
   bottom: 30px;
@@ -45,16 +50,25 @@
   cursor: pointer;
   display: none;
   z-index: 100;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, opacity 0.3s ease;
 }
 #backToTop:hover {
   background-color: #005bb5;
 }
+
+/* 🖼 Project thumbnails */
 .project-thumb {
   width: 100%;
+  height: 350px; 
+  object-fit: cover;
+  object-position: top;
   border-radius: 8px;
   margin-bottom: 1rem;
+  background-color: #f3f4f6;
 }
+
+
+/* 🔖 Tech tags */
 .tech-tags {
   margin: 1rem 0;
 }
@@ -67,6 +81,12 @@
   border-radius: 4px;
   margin: 0 0.4rem 0.4rem 0;
 }
+body.dark .tech-tags span {
+  background: #1f2937;
+  color: #60a5fa;
+}
+
+/* 🏷 Featured badge */
 .project-badge {
   display: inline-block;
   background-color: #ffdd57;

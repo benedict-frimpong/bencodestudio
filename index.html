@@ -7,7 +7,9 @@
   <meta name="description" content="BenCode Studio builds elegant, responsive websites and mobile apps for small businesses and entrepreneurs." />
   <meta name="keywords" content="BenCode Studio, web development, app development, Flutter, portfolio, mobile app studio, DC developer" />
   <meta name="author" content="BenCode Studio" />
-  
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://bencodestudio.com/" />
+
   <!-- Open Graph -->
   <meta property="og:title" content="BenCode Studio | Web & App Development" />
   <meta property="og:description" content="Elegant websites and powerful mobile apps built by BenCode Studio." />
@@ -19,16 +21,14 @@
   <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
   <!-- Styles and Fonts -->
-<link rel="stylesheet" href="style/main.css" />
-<link rel="stylesheet" href="style/components.css" />
-<link rel="stylesheet" href="style/sections.css" />
-<link rel="stylesheet" href="style/responsive.css" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="style/main.css" />
+  <link rel="stylesheet" href="style/components.css" />
+  <link rel="stylesheet" href="style/sections.css" />
+  <link rel="stylesheet" href="style/responsive.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
-  <!-- Schema.org (SEO) -->
+  <!-- Schema.org -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -38,54 +38,56 @@
     "email": "frimpong.work@outlook.com",
     "description": "Web and mobile app development studio.",
     "sameAs": [
-      "https://linkedin.com/in/yourprofile",
-      "https://github.com/yourprofile"
+      "https://linkedin.com/in/benedictfrimpong",
+      "https://github.com/benedict-frimpong"
     ]
   }
   </script>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-DNV8MFNW48"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-DNV8MFNW48');
-</script>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-DNV8MFNW48"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-DNV8MFNW48');
+  </script>
 </head>
 
 <body>
 
-<!-- Navigation Bar -->
+<!-- Navigation -->
 <nav class="navbar">
   <a href="#hero" class="logo">BenCode Studio</a>
+  <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#services">Services</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
+  <button id="darkToggle" title="Toggle Dark Mode">🌙</button>
 </nav>
 
-<!-- Hero Section -->
+<!-- Hero -->
 <header id="hero" class="hero" data-aos="fade-up">
-  <img src="images/Bencode.png" alt="BenCode Studio Logo" class="hero-logo" width="120">
+  <img src="images/Bencode.png" alt="BenCode Studio Logo" class="hero-logo" width="120" loading="lazy">
   <h1>Welcome to <span class="highlight">BenCode Studio</span></h1>
-  <p>We craft elegant websites and powerful mobile apps tailored to your goals.</p>
+  <p>Transforming ideas into fast, elegant web and mobile experiences.</p>
   <div class="hero-buttons">
     <a href="#projects" class="btn">See Our Work</a>
     <a href="#contact" class="btn secondary">Get a Quote</a>
   </div>
 </header>
 
-<!-- About Section -->
-<section id="about" class="section" data-aos="fade-right" data-aos-duration="800">
+<!-- About -->
+<section id="about" class="section" data-aos="fade-right">
   <h2>Who We Are</h2>
   <p>BenCode Studio is a digital development studio focused on sleek UI/UX design, cross-platform development, and scalable backend systems. We help small businesses and entrepreneurs stand out online.</p>
 </section>
 
-<!-- Services Section -->
-<section id="services" class="section" data-aos="fade-left" data-aos-duration="800">
+<!-- Services -->
+<section id="services" class="section" data-aos="fade-left">
   <h2>What We Do</h2>
   <div class="project-grid">
     <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
@@ -103,13 +105,12 @@
   </div>
 </section>
 
-<!-- Projects Section -->
+<!-- Projects -->
 <section id="projects" class="section" data-aos="fade-up">
   <h2>Featured Projects</h2>
   <div class="project-grid">
-     <!-- DayPilot Project -->
     <div class="project-card" data-aos="fade-up" data-aos-delay="100">
-      <img src="images/projects/daypilot.png" alt="DayPilot App Screenshot" class="project-thumb">
+      <img src="images/projects/daypilot.png" alt="DayPilot App Screenshot" class="project-thumb" loading="lazy">
       <h3>DayPilot Planner App</h3>
       <p>A smart productivity app with task management, event discovery, and AI-assisted scheduling.</p>
       <div class="tech-tags">
@@ -119,22 +120,9 @@
       </div>
       <a href="projects/daypilot.html" class="btn small">View Project</a>
     </div>
-<!-- Portfolio Website Project -->
-<div class="project-card" data-aos="fade-up" data-aos-delay="300">
-  <img src="images/projects/portfolio.png" alt="BenCode Studio Website Screenshot" class="project-thumb">
-  <h3>BenCode Studio Website</h3>
-  <p>This responsive one-page website showcases services, projects, and contact info for BenCode Studio.</p>
-  <div class="tech-tags">
-    <span>HTML</span>
-    <span>CSS</span>
-    <span>JavaScript</span>
-  </div>
-  <a href="projects/portfolio.html" class="btn small">View Project</a>
-</div>
 
-    <!-- Dashcam Merger Project -->
     <div class="project-card" data-aos="fade-up" data-aos-delay="200">
-      <img src="images/projects/dashcam.png" alt="Dashcam Merger Screenshot" class="project-thumb">
+      <img src="images/projects/dashcam.png" alt="Dashcam Merger Screenshot" class="project-thumb" loading="lazy">
       <h3>Dashcam Merger Tool</h3>
       <p>A desktop app built with Python and PyQt for merging dashcam footage with audio and GUI control.</p>
       <div class="tech-tags">
@@ -145,19 +133,31 @@
       <a href="projects/dashcam.html" class="btn small">View Project</a>
     </div>
 
+    <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+      <img src="images/projects/portfolio.png" alt="Portfolio Screenshot" class="project-thumb" loading="lazy">
+      <h3>BenCode Studio Website</h3>
+      <p>This responsive one-page website showcases services, projects, and contact info for BenCode Studio.</p>
+      <div class="tech-tags">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+      </div>
+      <a href="projects/portfolio.html" class="btn small">View Project</a>
+    </div>
   </div>
+
   <div style="margin-top: 2rem; text-align: center;">
     <a href="projects/index.html" class="btn">View All Projects</a>
   </div>
 </section>
 
-<!-- Testimonials Section -->
+<!-- Testimonials -->
 <section class="section testimonials" data-aos="fade-up">
   <h2>What Clients Say</h2>
   <blockquote>“BenCode Studio delivered my site fast and exceeded my expectations.”<br>– Kofi, Vechovaly CEO</blockquote>
 </section>
 
-<!-- Contact Section -->
+<!-- Contact -->
 <section id="contact" class="section contact" data-aos="fade-up">
   <h2>Contact Us</h2>
   <p>Let's work together. Send a message or reach out directly:</p>
@@ -170,11 +170,11 @@
 </section>
 
 <!-- Footer -->
-<footer data-aos="fade-in" data-aos-duration="1000">
+<footer data-aos="fade-in">
   <p>&copy; 2025 BenCode Studio. All rights reserved.</p>
 </footer>
 
-<!-- Back to Top Button -->
+<!-- Back to Top -->
 <button id="backToTop" title="Go to top">↑</button>
 
 <!-- Scripts -->
@@ -188,9 +188,46 @@
   window.addEventListener("scroll", () => {
     backToTopBtn.style.display = window.scrollY > 300 ? "block" : "none";
   });
-
   backToTopBtn.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  // 🍔 Mobile Menu Toggle
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  toggleBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+  });
+
+  // 🌙 Dark Mode Toggle
+  const darkToggle = document.getElementById("darkToggle");
+  const body = document.body;
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") body.classList.add("dark");
+
+  darkToggle.addEventListener("click", () => {
+    body.classList.toggle("dark");
+    localStorage.setItem("theme", body.classList.contains("dark") ? "dark" : "light");
+  });
+
+  // 🎯 Active Link on Scroll
+  const sections = document.querySelectorAll("section");
+  const navItems = document.querySelectorAll(".nav-links a");
+
+  window.addEventListener("scroll", () => {
+    let current = "";
+    sections.forEach(section => {
+      const top = section.offsetTop - 120;
+      if (pageYOffset >= top) {
+        current = section.getAttribute("id");
+      }
+    });
+    navItems.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href").includes(current)) {
+        link.classList.add("active");
+      }
+    });
   });
 </script>
 
